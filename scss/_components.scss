@@ -23,3 +23,16 @@
     color: white;
   }
 }
+
+@media (max-width: 48em) {
+  .red-btn {
+    font-size: 3.7rem;
+    line-height: 7rem;
+
+    &__icon {
+      width: 11rem;
+      height: 11rem;
+      margin-right: 2.4rem;
+    }
+  }
+}
