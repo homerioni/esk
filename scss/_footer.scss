@@ -1,0 +1,179 @@
+@import "param";
+
+body {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 39.4rem;
+
+  @media (max-width: 48em) {
+    padding-bottom: 181.2rem;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+
+  &__content {
+    display: flex;
+    align-items: center;
+
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+
+    &:nth-child(1) {
+      min-height: 16.4rem;
+    }
+
+    &:nth-child(2) {
+      min-height: 8.5rem;
+      border-top: 1px solid #D1D8E4;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 7.8rem;
+    height: 8.7rem;
+    mix-blend-mode: exclusion;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu-item {
+    font-size: 2rem;
+    line-height: 2.95rem;
+    white-space: nowrap;
+
+    &:nth-child(n + 2) {
+      margin-left: 3rem;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+
+  &__btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5.5rem;
+    height: 5.5rem;
+    margin-right: 1.2rem;
+    border-radius: 100%;
+    background-color: $red;
+
+    font-weight: bold;
+    font-size: 1.9rem;
+    line-height: 3.5rem;
+    color: white;
+  }
+
+  &__req-logo {
+    width: 25.7rem;
+    height: 2.9rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .footer {
+    &__content {
+      flex-direction: column;
+      justify-content: center;
+
+      font-size: 3.2rem;
+      line-height: 3.8rem;
+
+      &:nth-child(1) {
+        min-height: 101.6rem;
+      }
+
+      &:nth-child(2) {
+        min-height: 48.4rem;
+      }
+    }
+
+    &__container {
+      flex-direction: column;
+      justify-content: normal;
+    }
+
+    &__logo {
+      width: 12.2rem;
+      height: 13.6rem;
+      margin-bottom: 8rem;
+    }
+
+    &__menu {
+      flex-direction: column;
+      margin-bottom: 8rem;
+    }
+
+    &__menu-item {
+      font-size: 4rem;
+      line-height: 5.9rem;
+
+      &:nth-child(n + 2) {
+        margin-left: 0;
+        margin-top: 4rem;
+      }
+    }
+
+    &__btn {
+      font-size: 3.2rem;
+      line-height: 6rem;
+    }
+
+    &__btn-icon {
+      width: 11rem;
+      height: 11rem;
+      margin-right: 2.4rem;
+      margin-top: -2px;
+
+      font-size: 3.7rem;
+      line-height: 7rem;
+    }
+
+    &__link {
+      margin-bottom: 4rem;
+    }
+
+    &__copyright {
+      margin-bottom: 6rem;
+    }
+
+    &__req-logo {
+      width: 21.6rem;
+      height: 14.8rem;
+    }
+  }
+}
