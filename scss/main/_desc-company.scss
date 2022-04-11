@@ -1,0 +1,108 @@
+@import "../param";
+
+.desc-company {
+  margin-bottom: 18rem;
+
+  &__title {
+    width: 75rem;
+    margin-bottom: 7rem;
+    @include title-font;
+    font-weight: 350;
+
+    &--bold {
+      font-weight: bold;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 44rem;
+    min-height: 38.3rem;
+    padding: 5rem 4rem;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03)),
+    conic-gradient(from 38.13deg at 76.38% 28.46%, #E2E2E2 0deg, #EBEBEB 45.68deg, #ECECEC 52.84deg, #ECECEC 155.62deg, #EDEDED 187.5deg, #F2F2F2 223.13deg, #F2F2F2 253.13deg, #F7F7F7 286.87deg, #FBFAFA 359.86deg, #E2E2E2 360deg);
+
+    &:nth-child(n + 4) {
+      margin-top: 3rem;
+    }
+  }
+
+  &__item-icon {
+    width: 4.4rem;
+    height: 4.4rem;
+
+    path {
+      fill: $red;
+    }
+  }
+
+  &__item-text-block {
+  }
+
+  &__item-title {
+    margin-bottom: 2.2rem;
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 2.65rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  &__item-description {
+    font-size: 1.8rem;
+    line-height: 2.65rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .desc-company {
+    margin-bottom: 20rem;
+
+    &__title {
+      width: 100%;
+      margin-bottom: 6rem;
+      line-height: 8.4rem;
+    }
+
+    &__cards {
+    }
+
+    &__item {
+      width: 100%;
+      min-height: 59.4rem;
+      padding: 8rem 5rem;
+
+      &:nth-child(n + 2) {
+        margin-top: 3rem;
+      }
+    }
+
+    &__item-icon {
+      width: 7.4rem;
+      height: 7.4rem;
+    }
+
+    &__item-text-block {
+    }
+
+    &__item-title {
+      margin-bottom: 3.4rem;
+      font-size: 3.2rem;
+      line-height: 4.7rem;
+    }
+
+    &__item-description {
+      font-weight: 350;
+      font-size: 3.4rem;
+      line-height: 5rem;
+    }
+  }
+}
