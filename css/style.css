@@ -1221,6 +1221,7 @@ body {
      object-fit: cover;
   -o-object-position: right;
      object-position: right;
+  mix-blend-mode: darken;
 }
 .equipment__text-block {
   width: 42rem;
