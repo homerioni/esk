@@ -143,6 +143,38 @@ input[type=number] {
     width: 100%;
   }
 }
+.red-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+.red-btn--white {
+  color: white;
+}
+.red-btn__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 5.5rem;
+  height: 5.5rem;
+  margin-right: 1.2rem;
+  border-radius: 100%;
+  background-color: #DD1212;
+  color: white;
+}
+
 .header {
   background-color: #fff;
 }
@@ -660,11 +692,11 @@ input[type=number] {
 body {
   min-height: 100vh;
   position: relative;
-  padding-bottom: 39.4rem;
+  padding-bottom: 24.9rem;
 }
 @media (max-width: 48em) {
   body {
-    padding-bottom: 181.2rem;
+    padding-bottom: 150rem;
   }
 }
 
@@ -840,6 +872,265 @@ body {
   .footer__req-logo {
     width: 21.6rem;
     height: 14.8rem;
+  }
+}
+.main-intro {
+  position: relative;
+  width: 100%;
+  height: 85.1rem;
+  margin-bottom: 18rem;
+}
+.main-intro__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.main-intro__bg > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-intro__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+.main-intro__slide-btn {
+  margin-bottom: 3.5rem;
+}
+.main-intro__slide-title {
+  width: 73rem;
+  font-weight: bold;
+  font-size: 6rem;
+  line-height: 6.5rem;
+  color: white;
+}
+.main-intro__nav-block {
+  position: absolute;
+  left: 26rem;
+  bottom: 5rem;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main-intro__scrollbar {
+  position: relative;
+  z-index: 1;
+  width: 13.2rem;
+  height: 3px;
+  margin: 0 1.1rem;
+  border-radius: 4px;
+  background-color: white;
+}
+.main-intro__scrollbar .swiper-scrollbar-drag {
+  background: #DD1212;
+}
+.main-intro__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  margin-right: 1.5rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  color: white;
+}
+.main-intro__arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 100%;
+  background-color: white;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  cursor: pointer;
+}
+.main-intro__arrow--left {
+  margin-right: 1.1rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.main-intro__links-block {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 68.7rem;
+  padding: 9rem 3rem 7rem 7rem;
+  background-color: white;
+}
+.main-intro__links-title-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5rem;
+}
+.main-intro__links-title {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  position: relative;
+  font-weight: 800;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  letter-spacing: 0.02em;
+}
+.main-intro__links-title:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+  width: 4.5rem;
+  height: 2px;
+  background-color: #8A8A8A;
+}
+.main-intro__links-catalog {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+.main-intro__links-catalog > span {
+  margin-left: 0.8rem;
+}
+.main-intro__list {
+  list-style-position: inside;
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+}
+.main-intro__list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 3.3rem;
+}
+.main-intro__list-item-num {
+  margin-right: 1rem;
+  margin-top: 2px;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: #DD1212;
+}
+
+@media (max-width: 48em) {
+  .main-intro {
+    height: auto;
+    margin-bottom: 20rem;
+  }
+  .main-intro__slide {
+    min-height: 110rem;
+    padding-bottom: 16rem;
+  }
+  .main-intro__slide-btn {
+    margin-bottom: 3.5rem;
+  }
+  .main-intro__slide-title {
+    width: 100%;
+    font-size: 3.4rem;
+    line-height: 8rem;
+  }
+  .main-intro__nav-block {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: -15rem;
+    margin-bottom: 6rem;
+  }
+  .main-intro__scrollbar {
+    width: 26.4rem;
+    margin: 0 2.2rem;
+  }
+  .main-intro__pagination {
+    margin-right: 3rem;
+    font-size: 3.2rem;
+  }
+  .main-intro__arrow {
+    width: 9rem;
+    height: 9rem;
+    font-size: 3.2rem;
+  }
+  .main-intro__arrow--left {
+    margin-right: 2.2rem;
+  }
+  .main-intro__links-block {
+    position: static;
+    width: 100%;
+    padding: 7rem 4rem;
+  }
+  .main-intro__links-title-block {
+    margin-bottom: 10rem;
+  }
+  .main-intro__links-title {
+    font-size: 3.6rem;
+    line-height: 6.4rem;
+  }
+  .main-intro__links-title:after {
+    bottom: -2rem;
+    width: 9rem;
+  }
+  .main-intro__links-catalog {
+    font-size: 3.2rem;
+    line-height: 6rem;
+  }
+  .main-intro__links-catalog > span {
+    margin-left: 1.6rem;
+  }
+  .main-intro__list-item {
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+  }
+  .main-intro__list-item-num {
+    margin-right: 2rem;
+    margin-top: -2px;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
   }
 }
 body.lock {
