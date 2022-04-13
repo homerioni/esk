@@ -35,7 +35,7 @@
                 <a href="#">Контакты</a>
             </li>
             <div class="header__contacts-mob mobile">
-                <button class="header__callback">
+                <button class="header__callback popup-callback">
                     Заказать звонок  <span class="header__callback--red">→</span>
                 </button>
                 <a href="tel:84993224100" class="header__phone">
@@ -185,7 +185,7 @@
                 </a>
             </div>
         </div>
-        <button class="header__callback desktop">
+        <button class="header__callback popup-callback desktop">
             Заказать звонок  <span class="header__callback--red">→</span>
         </button>
         <a href="tel:84993224100" class="header__phone">
@@ -664,7 +664,7 @@
                     <a href="#">Контакты</a>
                 </li>
             </ul>
-            <button class="footer__btn">
+            <button type="button" class="footer__btn popup-callback">
                 <div class="footer__btn-icon">→</div>
                 <span>Заказать звонок</span>
             </button>
@@ -681,6 +681,34 @@
         </div>
     </div>
 </footer>
+
+<div class="modal-callback">
+    <div class="modal-callback__bg"></div>
+    <div class="modal-callback__content modal-callback__content--first">
+        <div class="modal-callback__close"></div>
+        <div class="modal-callback__title">Заказать звонок</div>
+        <div class="modal-callback__description">Отправьте нам свой номер телефона и мы Вам перезвоним!</div>
+        <form onsubmit="return false" class="modal-callback__form">
+            <label class="modal-callback__label">
+                <input type="tel" class="modal-callback__input mask-phone" placeholder="+7 ( ___ ) ___ - __ - __" required>
+            </label>
+            <button type="submit" class="modal-callback__btn red-btn">
+                <div class="red-btn__icon">→</div>
+                <span>Связаться со мной</span>
+            </button>
+        </form>
+    </div>
+    <div class="modal-callback__content modal-callback__content--second">
+        <div class="modal-callback__close"></div>
+        <div class="modal-callback__check-icon">
+            <svg viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 3L11.4375 22L3 13.3636" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="modal-callback__title">Ваша заявка принята!</div>
+        <div class="modal-callback__description">Наши специалисты свяжуться с вами в ближайшее время</div>
+    </div>
+</div>
 
 
 <script src="js/jquery-3.6.0.min.js"></script>
