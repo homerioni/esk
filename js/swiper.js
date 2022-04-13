@@ -71,3 +71,61 @@ const main_intro_slider = new Swiper('.main-intro', {
         delay: 7000,
     },
 });
+
+const competed_main_slider = new Swiper('.completed__slider--main', {
+    direction: 'horizontal',
+
+    breakpoints: {
+        769: {
+            slidesPerView: 3.5,
+            spaceBetween: rem(4),
+
+            grid: {
+                rows: 2,
+                fill: 'row',
+            },
+        },
+
+        0: {
+            slidesPerView: 1.1,
+            spaceBetween: rem(2),
+        },
+    },
+
+    pagination: {
+        el: '.completed__pagination',
+        type: 'fraction',
+        formatFractionCurrent: function (number) {
+            if (number < 10) {
+                return '0' + number;
+            } else {
+                return number;
+            }
+        },
+        formatFractionTotal: function (number) {
+            if (number < 10) {
+                return '0' + number;
+            } else {
+                return number;
+            }
+        },
+        renderFraction: function (currentClass, totalClass) {
+            return '<div class="' + currentClass + '"></div>' +
+                '<div class="completed__scrollbar"></div>' +
+                '<div class="' + totalClass + '"></div>';
+        },
+    },
+
+    navigation: {
+        nextEl: '.completed__arrow--right',
+        prevEl: '.completed__arrow--left',
+    },
+
+    scrollbar: {
+        el: ".completed__scrollbar",
+    },
+
+    autoplay: {
+        delay: 7000,
+    },
+});

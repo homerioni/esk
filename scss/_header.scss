@@ -3,17 +3,25 @@
 .header {
   background-color: #fff;
 
+  &:before {
+    content: '';
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: #F5F5F5;
+    opacity: 0;
+    transition: 0.5s ease;
+  }
+
   &.search-open {
     &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      z-index: 2;
-      display: block;
-      width: 100vw;
-      height: 100vh;
-      background-color: #F5F5F5;
+      visibility: visible;
+      opacity: 1;
     }
 
     .header__menu,
@@ -42,6 +50,7 @@
     z-index: 3;
     width: 6.1rem;
     height: 6.8rem;
+    margin-right: 3rem;
     mix-blend-mode: exclusion;
 
     > img {
@@ -290,6 +299,7 @@
       &:before {
         position: fixed;
         background-color: #fff;
+        transition: none;
       }
 
       .header__phone {
@@ -304,6 +314,7 @@
     &__logo {
       width: 8.6rem;
       height: 9.6rem;
+      margin-right: 0;
     }
 
     &__menu {
