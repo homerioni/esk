@@ -2,12 +2,17 @@
 
 $(document).ready(function () {
 
+    // Маски для input
+    $('.mask-phone').mask('+7 (999) 999-99-99');
+
+    // Бургер меню
     $('.header__burger').click(function () {
         $(this).toggleClass('open');
         $('.header__menu').toggleClass('open');
         $('body').toggleClass('lock');
     });
 
+    // Поиск
     $('.header__search').click(function () {
         $('.header').addClass('search-open');
         $('.header__search').addClass('open');

@@ -1764,6 +1764,225 @@ body {
     margin-top: 3rem;
   }
 }
+.feedback {
+  position: relative;
+  margin-bottom: 18rem;
+  height: 69.2rem;
+  background-color: white;
+}
+.feedback__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 86.8rem;
+  height: 100%;
+}
+.feedback__bg > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.feedback__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  padding: 6rem 0;
+}
+.feedback__title-block {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 50rem;
+  height: 100%;
+}
+.feedback__sub-title {
+  margin-bottom: 1.3rem;
+  font-size: 1.6rem;
+  line-height: 2.35rem;
+  letter-spacing: 0.02em;
+  color: #F5F5F5;
+}
+.feedback__title {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 4.3rem;
+  line-height: 5.5rem;
+  color: #F5F5F5;
+}
+@media (max-width: 48em) {
+  .feedback__title {
+    font-size: 6.8rem;
+    line-height: 11rem;
+  }
+}
+.feedback__stats-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.feedback__stats-text {
+  padding: 0 3rem;
+  border-right: 1px solid #8D929A;
+  font-weight: 350;
+  font-size: 1.8rem;
+  line-height: 2.65rem;
+  color: #F5F5F5;
+}
+.feedback__stats-text:first-child {
+  padding-left: 0;
+}
+.feedback__stats-text:last-child {
+  padding-right: 0;
+  border: none;
+}
+.feedback__stats-text b {
+  margin-right: 0.5rem;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.feedback__form {
+  width: 67.6rem;
+}
+.feedback__form-title {
+  margin-bottom: 5.3rem;
+  font-weight: bold;
+  font-size: 4.3rem;
+  line-height: 5.5rem;
+}
+@media (max-width: 48em) {
+  .feedback__form-title {
+    font-size: 6.8rem;
+    line-height: 11rem;
+  }
+}
+.feedback__label {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #D1D8E4;
+}
+.feedback__label:nth-child(n+2) {
+  margin-top: 3.5rem;
+}
+.feedback__label-name {
+  font-weight: 350;
+  font-size: 1.6rem;
+  line-height: 2.35rem;
+}
+.feedback__input {
+  width: 100%;
+  height: 4rem;
+  font-weight: 350;
+  font-size: 1.8rem;
+  line-height: 2.65rem;
+}
+.feedback__slide-btn {
+  margin-top: 5.5rem;
+}
+
+@media (max-width: 48em) {
+  .feedback {
+    margin-bottom: 20rem;
+    height: auto;
+  }
+  .feedback__bg {
+    width: 100%;
+    height: 84.4rem;
+  }
+  .feedback__bg > img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .feedback__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+    padding: 0 4rem;
+  }
+  .feedback__title-block {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100%;
+    height: 84.4rem;
+    padding: 4rem 0;
+    margin-bottom: 12rem;
+  }
+  .feedback__sub-title {
+    font-size: 2.8rem;
+    line-height: 4.1rem;
+  }
+  .feedback__title {
+    margin-bottom: 4rem;
+    line-height: 8rem;
+  }
+  .feedback__stats-text {
+    padding: 0 6rem;
+    font-size: 3.6rem;
+    line-height: 5.3rem;
+  }
+  .feedback__stats-text b {
+    margin-right: 1rem;
+    font-size: 6rem;
+  }
+  .feedback__form {
+    width: 100%;
+    margin-bottom: 20rem;
+  }
+  .feedback__form-title {
+    margin-bottom: 4rem;
+  }
+  .feedback__label:nth-child(n+2) {
+    margin-top: 6rem;
+  }
+  .feedback__label-name {
+    font-size: 3.2rem;
+    line-height: 4.7rem;
+  }
+  .feedback__input {
+    height: 8rem;
+    font-size: 3.4rem;
+    line-height: 5rem;
+  }
+  .feedback__slide-btn {
+    margin-top: 7rem;
+  }
+}
 body.lock {
   overflow: hidden;
 }
