@@ -26,7 +26,7 @@ const rem = function (rem) {
         return 0.005208335 * $(window).width() * rem;
     } else {
         // где 375 это ширина моб версии макета
-        return (100/375) * (0.1 * $(window).width()) * rem;
+        return (100/414) * (0.1 * $(window).width()) * rem;
     }
 }
 
