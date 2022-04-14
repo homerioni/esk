@@ -29,7 +29,7 @@ $(document).ready(function () {
             .hide()
             .fadeIn();
     });
-    $('.modal-callback__form').submit(() => {
+    $('.modal-callback__form').submit(function () {
         $('.modal-callback').addClass('second');
     });
     $('.modal-callback__close').click(() => {
@@ -41,6 +41,12 @@ $(document).ready(function () {
         $('.modal-callback')
             .hide()
             .removeClass('second');
+    });
+
+    // Catalog category open
+    $('.catalog__category-title').click(function () {
+        $(this).toggleClass('open');
+        $('.catalog__category-list').slideToggle();
     });
 
 });
