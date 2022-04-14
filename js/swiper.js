@@ -1,25 +1,3 @@
-/*
-const reviews_slider = new Swiper('.reviews__slider', {
-    direction: 'horizontal',
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 50,
-    breakpoints: {
-        0: {},
-    },
-    pagination: {
-        el: '',
-        type: '',
-    },
-    navigation: {
-        nextEl: '',
-        prevEl: '',
-    },
-    autoplay: {
-    },
-});
-*/
-
 // Пересчет rem в px для swiper
 const rem = function (rem) {
     if ($(window).width() > 768) {
@@ -126,6 +104,49 @@ const competed_main_slider = new Swiper('.completed__slider--main', {
     },
 
     autoplay: {
-        delay: 7000,
+        delay: 5000,
+    },
+});
+
+const catalog_title_slider = new Swiper('.catalog-title__content', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    spaceBetween: rem(5),
+
+    pagination: {
+        el: '.catalog-title__pagination',
+        type: 'fraction',
+        formatFractionCurrent: function (number) {
+            if (number < 10) {
+                return '0' + number;
+            } else {
+                return number;
+            }
+        },
+        formatFractionTotal: function (number) {
+            if (number < 10) {
+                return '0' + number;
+            } else {
+                return number;
+            }
+        },
+        renderFraction: function (currentClass, totalClass) {
+            return '<div class="' + currentClass + '"></div>' +
+                '<div class="catalog-title__scrollbar"></div>' +
+                '<div class="' + totalClass + '"></div>';
+        },
+    },
+
+    navigation: {
+        nextEl: '.catalog-title__arrow--right',
+        prevEl: '.catalog-title__arrow--left',
+    },
+
+    scrollbar: {
+        el: ".catalog-title__scrollbar",
+    },
+
+    autoplay: {
+        delay: 5000,
     },
 });
