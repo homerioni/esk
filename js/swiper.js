@@ -150,3 +150,63 @@ const catalog_title_slider = new Swiper('.catalog-title__content', {
         delay: 5000,
     },
 });
+
+const list_category_slider = new Swiper('.list-category__cards', {
+    direction: 'horizontal',
+
+    breakpoints: {
+        769: {
+            slidesPerView: 4,
+            spaceBetween: rem(3),
+        },
+        0: {
+            slidesPerView: 1.1,
+            spaceBetween: rem(2),
+        },
+    },
+
+    pagination: {
+        el: '.list-category__pagination',
+        type: 'fraction',
+        formatFractionCurrent: function (number) {
+            if (number < 10) {
+                return '0' + number;
+            } else {
+                return number;
+            }
+        },
+        formatFractionTotal: function (number) {
+            if (number < 10) {
+                return '0' + number;
+            } else {
+                return number;
+            }
+        },
+        renderFraction: function (currentClass, totalClass) {
+            return '<div class="' + currentClass + '"></div>' +
+                '<div class="list-category__scrollbar"></div>' +
+                '<div class="' + totalClass + '"></div>';
+        },
+    },
+
+    navigation: {
+        nextEl: '.list-category__arrow--right',
+        prevEl: '.list-category__arrow--left',
+    },
+
+    scrollbar: {
+        el: ".list-category__scrollbar",
+    },
+
+    autoplay: {
+        delay: 5000,
+    },
+
+    on: {
+        init: () => {
+            if ($('.list-category__item').length <= 4 && $(window).width > 768) {
+                $('.list-category__nav-block').css('display', 'none');
+            }
+        },
+    }
+});
