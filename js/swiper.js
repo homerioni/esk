@@ -210,3 +210,54 @@ const list_category_slider = new Swiper('.list-category__cards', {
         },
     }
 });
+
+const parts_slider = new Swiper('.parts__cards', {
+    direction: 'horizontal',
+
+    breakpoints: {
+        769: {
+            slidesPerView: 4,
+        },
+        0: {
+            slidesPerView: 1.85,
+            spaceBetween: rem(1.5),
+        },
+    },
+
+    pagination: {
+        el: '.parts__pagination',
+        type: 'fraction',
+        formatFractionCurrent: function (number) {
+            if (number < 10) {
+                return '0' + number;
+            } else {
+                return number;
+            }
+        },
+        formatFractionTotal: function (number) {
+            if (number < 10) {
+                return '0' + number;
+            } else {
+                return number;
+            }
+        },
+        renderFraction: function (currentClass, totalClass) {
+            return '<div class="' + currentClass + '"></div>' +
+                '<div class="parts__scrollbar"></div>' +
+                '<div class="' + totalClass + '"></div>';
+        },
+    },
+
+    navigation: {
+        nextEl: '.parts__arrow--right',
+        prevEl: '.parts__arrow--left',
+    },
+
+    scrollbar: {
+        el: ".parts__scrollbar",
+    },
+
+    autoplay: {
+        delay: 5000,
+    },
+});
