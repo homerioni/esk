@@ -35,4 +35,44 @@
       margin-right: 2.4rem;
     }
   }
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 9.6rem;
+      height: 9.6rem;
+
+      font-size: 4rem;
+      line-height: 5.9rem;
+      color: $gray;
+
+      &--active {
+        background-color: $red;
+        color: white;
+      }
+    }
+
+    &__arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 9.6rem;
+      height: 9.6rem;
+
+      > svg {
+        width: 3.2rem;
+        height: 3.2rem;
+
+        path {
+          fill: $gray;
+        }
+      }
+    }
+  }
 }

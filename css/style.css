@@ -185,6 +185,58 @@ input[type=number] {
     height: 11rem;
     margin-right: 2.4rem;
   }
+
+  .pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .pagination__number {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 9.6rem;
+    height: 9.6rem;
+    font-size: 4rem;
+    line-height: 5.9rem;
+    color: #8A8A8A;
+  }
+  .pagination__number--active {
+    background-color: #DD1212;
+    color: white;
+  }
+  .pagination__arrow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 9.6rem;
+    height: 9.6rem;
+  }
+  .pagination__arrow > svg {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+  .pagination__arrow > svg path {
+    fill: #8A8A8A;
+  }
 }
 .header {
   background-color: #fff;
@@ -2789,55 +2841,6 @@ body {
     font-size: 2.6rem;
     line-height: 3.8rem;
   }
-  .catalog__pagination {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 0 auto;
-  }
-  .catalog__pagination-number {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 9.6rem;
-    height: 9.6rem;
-    font-size: 4rem;
-    line-height: 5.9rem;
-    color: #8A8A8A;
-  }
-  .catalog__pagination-number--active {
-    background-color: #DD1212;
-    color: white;
-  }
-  .catalog__pagination-arrow {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 9.6rem;
-    height: 9.6rem;
-  }
-  .catalog__pagination-arrow > svg {
-    width: 3.2rem;
-    height: 3.2rem;
-  }
-  .catalog__pagination-arrow > svg path {
-    fill: #8A8A8A;
-  }
 }
 .list-category {
   margin-bottom: 12rem;
@@ -3045,6 +3048,329 @@ body {
   .list-category__item-img-box {
     width: 32rem;
     height: 100%;
+  }
+}
+.list-products {
+  margin-bottom: 18rem;
+}
+.list-products__title-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.list-products__column-name {
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+  line-height: 2.7rem;
+  color: #8A8A8A;
+}
+.list-products__column-name:nth-child(1) {
+  width: 49.8rem;
+}
+.list-products__column-name:nth-child(2) {
+  width: 13rem;
+}
+.list-products__column-name:nth-child(3) {
+  width: 16rem;
+}
+.list-products__column-name:nth-child(4) {
+  width: 13rem;
+}
+.list-products__column-name:nth-child(5) {
+  width: 20rem;
+}
+.list-products__column-name:nth-child(6) {
+  width: 15.5rem;
+}
+.list-products__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 11.5rem;
+  padding-left: 3rem;
+  background-color: #fff;
+}
+@media (min-width: 48.01em) {
+  .list-products__item:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    display: block;
+    width: 33rem;
+    height: 100%;
+    background-color: transparent;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+  }
+  .list-products__item:hover:before {
+    background-color: #DD1212;
+  }
+  .list-products__item:hover .list-products__item-text--price {
+    color: white;
+  }
+  .list-products__item:hover .list-products__item-order {
+    border-left: 1px solid rgba(255, 255, 255, 0.67);
+  }
+  .list-products__item:hover .list-products__item-order > svg path {
+    fill: white;
+  }
+  .list-products__item:nth-child(even) {
+    background-color: #ECECEC;
+  }
+}
+.list-products__item-img-box {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 11rem;
+  height: 10rem;
+  margin-right: 4rem;
+}
+.list-products__item-img-box > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.list-products__item-info-block {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.list-products__item-price-block {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.list-products__item-text {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.65rem;
+}
+.list-products__item-text--name {
+  width: 24rem;
+  margin-right: 8rem;
+}
+.list-products__item-text--dn {
+  width: 13rem;
+}
+.list-products__item-text--length {
+  width: 16rem;
+}
+.list-products__item-text--weight {
+  width: 13rem;
+}
+.list-products__item-text--pcs {
+  width: 20rem;
+}
+.list-products__item-text--price {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 15.5rem;
+  font-size: 2.8rem;
+  line-height: 4.1rem;
+  -webkit-transition: 0.15s ease;
+  transition: 0.15s ease;
+}
+.list-products__item-text--price:after {
+  content: "₽";
+  margin-left: 0.5rem;
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+.list-products__item-order {
+  position: relative;
+  z-index: 2;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  text-align: center;
+  border-left: 1px solid #d9dce1;
+  -webkit-transition: 0.15s ease;
+  transition: 0.15s ease;
+}
+.list-products__item-order > svg {
+  width: 4.7rem;
+  height: 4.7rem;
+}
+.list-products__item-order > svg path {
+  fill: #DD1212;
+}
+
+@media (max-width: 48em) {
+  .list-products {
+    margin-bottom: 20rem;
+  }
+  .list-products__content {
+    margin-bottom: 6rem;
+  }
+  .list-products__item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    min-height: auto;
+    padding-top: 3rem;
+    padding-left: 0;
+  }
+  .list-products__item:nth-child(n+2) {
+    margin-top: 3rem;
+  }
+  .list-products__item-img-box {
+    width: 16rem;
+    height: 17.4rem;
+    margin-right: 5rem;
+    margin-left: 3rem;
+  }
+  .list-products__item-info-block {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+    width: 43.2rem;
+    margin-bottom: 3.5rem;
+  }
+  .list-products__item-price-block {
+    width: 100%;
+    background-color: #ECECEC;
+    padding: 2.4rem 0;
+  }
+  .list-products__item-text {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 2.8rem;
+    line-height: 4.1rem;
+  }
+  .list-products__item-text--name {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 3rem;
+    font-size: 3.4rem;
+    line-height: 5rem;
+  }
+  .list-products__item-text--dn {
+    min-width: 18rem;
+    width: auto;
+  }
+  .list-products__item-text--dn:before {
+    content: "DN";
+    margin-right: 1rem;
+    color: #8A8A8A;
+  }
+  .list-products__item-text--dn:after {
+    content: " mm";
+  }
+  .list-products__item-text--length {
+    width: auto;
+  }
+  .list-products__item-text--length:before {
+    content: "Длинна";
+    margin-right: 1rem;
+    color: #8A8A8A;
+  }
+  .list-products__item-text--length:after {
+    content: " mm";
+  }
+  .list-products__item-text--weight {
+    min-width: 18rem;
+    width: auto;
+  }
+  .list-products__item-text--weight:before {
+    content: "Вес";
+    margin-right: 1rem;
+    color: #8A8A8A;
+  }
+  .list-products__item-text--weight:after {
+    content: " kg";
+  }
+  .list-products__item-text--pcs {
+    min-width: 18rem;
+    width: auto;
+  }
+  .list-products__item-text--pcs:before {
+    content: "Кол-во";
+    margin-right: 1rem;
+    color: #8A8A8A;
+  }
+  .list-products__item-text--pcs:after {
+    content: " шт";
+  }
+  .list-products__item-text--price {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 50%;
+    font-size: 4rem;
+    line-height: 5.9rem;
+  }
+  .list-products__item-text--price:before {
+    content: "Цена";
+    margin-right: 1rem;
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 5.4rem;
+  }
+  .list-products__item-text--price:after {
+    font-size: 2.6rem;
+    line-height: 3.1rem;
+  }
+  .list-products__item-order {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .list-products__item-order:before {
+    content: "В корзину";
+    margin-right: 1rem;
+    font-weight: bold;
+    font-size: 2.8rem;
+    line-height: 4.1rem;
+  }
+  .list-products__item-order > svg {
+    width: 5.4rem;
+    height: 5.4rem;
   }
 }
 body.lock {

@@ -1,0 +1,345 @@
+@import "../param";
+
+.list-products {
+  margin-bottom: 18rem;
+
+  &__title-block {
+    display: flex;
+    align-items: center;
+  }
+
+  &__column-name {
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+    line-height: 2.7rem;
+    color: $gray;
+
+    &:nth-child(1) {
+      width: 49.8rem;
+    }
+
+    &:nth-child(2) {
+      width: 13rem;
+    }
+
+    &:nth-child(3) {
+      width: 16rem;
+    }
+
+    &:nth-child(4) {
+      width: 13rem;
+    }
+
+    &:nth-child(5) {
+      width: 20rem;
+    }
+
+    &:nth-child(6) {
+      width: 15.5rem;
+    }
+
+    &:nth-child(7) {
+    }
+  }
+
+  &__content {
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 11.5rem;
+    padding-left: 3rem;
+    background-color: #fff;
+
+    @media (min-width: 48.01em) {
+      &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        display: block;
+        width: 33rem;
+        height: 100%;
+        background-color: transparent;
+        transition: 0.2s ease;
+      }
+
+      &:hover {
+        &:before {
+          background-color: $red;
+        }
+
+        .list-products__item-text--price {
+          color: white;
+        }
+
+        .list-products__item-order {
+          border-left: 1px solid rgba(255, 255, 255, 0.67);
+
+          > svg path {
+            fill: white;
+          }
+        }
+      }
+
+      &:nth-child(even) {
+        background-color: #ECECEC;
+      }
+    }
+  }
+
+  &__item-img-box {
+    flex: none;
+    width: 11rem;
+    height: 10rem;
+    margin-right: 4rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__item-info-block {
+    flex: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item-price-block {
+    flex: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item-text {
+    flex: none;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.65rem;
+
+    &--name {
+      width: 24rem;
+      margin-right: 8rem;
+    }
+
+    &--dn {
+      width: 13rem;
+    }
+
+    &--length {
+      width: 16rem;
+    }
+
+    &--weight {
+      width: 13rem;
+    }
+
+    &--pcs {
+      width: 20rem;
+    }
+
+    &--price {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: flex-start;
+      width: 15.5rem;
+      font-size: 2.8rem;
+      line-height: 4.1rem;
+      transition: 0.15s ease;
+
+      &:after {
+        content: '₽';
+        margin-left: 0.5rem;
+        font-weight: 800;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+      }
+    }
+  }
+
+  &__item-order {
+    position: relative;
+    z-index: 2;
+    flex: auto;
+    text-align: center;
+    border-left: 1px solid rgba(217, 220, 225, 1);
+    transition: 0.15s ease;
+
+    > svg {
+      width: 4.7rem;
+      height: 4.7rem;
+
+      path {
+        fill: $red;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .list-products {
+    margin-bottom: 20rem;
+
+    &__title-block {
+    }
+
+    &__column-name {
+    }
+
+    &__content {
+      margin-bottom: 6rem;
+    }
+
+    &__item {
+      flex-wrap: wrap;
+      align-items: center;
+      width: 100%;
+      min-height: auto;
+      padding-top: 3rem;
+      padding-left: 0;
+
+      &:nth-child(n + 2) {
+        margin-top: 3rem;
+      }
+    }
+
+    &__item-img-box {
+      width: 16rem;
+      height: 17.4rem;
+      margin-right: 5rem;
+      margin-left: 3rem;
+    }
+
+    &__item-info-block {
+      flex-wrap: wrap;
+      align-items: normal;
+      width: 43.2rem;
+      margin-bottom: 3.5rem;
+    }
+
+    &__item-price-block {
+      width: 100%;
+      background-color: #ECECEC;
+      padding: 2.4rem 0;
+    }
+
+    &__item-text {
+      height: fit-content;
+      font-size: 2.8rem;
+      line-height: 4.1rem;
+
+      &--name {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 3rem;
+        font-size: 3.4rem;
+        line-height: 5rem;
+      }
+
+      &--dn {
+        min-width: 18rem;
+        width: auto;
+
+        &:before {
+          content: 'DN';
+          margin-right: 1rem;
+          color: $gray;
+        }
+
+        &:after {
+          content: ' mm';
+        }
+      }
+
+      &--length {
+        width: auto;
+
+        &:before {
+          content: 'Длинна';
+          margin-right: 1rem;
+          color: $gray;
+        }
+
+        &:after {
+          content: ' mm';
+        }
+      }
+
+      &--weight {
+        min-width: 18rem;
+        width: auto;
+
+        &:before {
+          content: 'Вес';
+          margin-right: 1rem;
+          color: $gray;
+        }
+
+        &:after {
+          content: ' kg';
+        }
+      }
+
+      &--pcs {
+        min-width: 18rem;
+        width: auto;
+
+        &:before {
+          content: 'Кол-во';
+          margin-right: 1rem;
+          color: $gray;
+        }
+
+        &:after {
+          content: ' шт';
+        }
+      }
+
+      &--price {
+        justify-content: center;
+        width: 50%;
+        font-size: 4rem;
+        line-height: 5.9rem;
+
+        &:before {
+          content: 'Цена';
+          margin-right: 1rem;
+          font-weight: 400;
+          font-size: 2.6rem;
+          line-height: 5.4rem;
+        }
+
+        &:after {
+          font-size: 2.6rem;
+          line-height: 3.1rem;
+        }
+      }
+    }
+
+    &__item-order {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:before {
+        content: 'В корзину';
+        margin-right: 1rem;
+        font-weight: bold;
+        font-size: 2.8rem;
+        line-height: 4.1rem;
+      }
+
+      > svg {
+        width: 5.4rem;
+        height: 5.4rem;
+      }
+    }
+  }
+}

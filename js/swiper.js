@@ -204,7 +204,7 @@ const list_category_slider = new Swiper('.list-category__cards', {
 
     on: {
         init: () => {
-            if ($('.list-category__item').length <= 4 && $(window).width > 768) {
+            if ($('.list-category__item').length <= 4 && $(window).width() > 768) {
                 $('.list-category__nav-block').css('display', 'none');
             }
         },
