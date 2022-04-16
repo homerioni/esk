@@ -262,6 +262,7 @@ const parts_slider = new Swiper('.parts__cards', {
     },
 });
 
+let slide_number, not_image_product_intro = false;
 const product_intro_slider = new Swiper('.product-intro__image-block', {
     slidesPerView: 1,
 
@@ -305,4 +306,42 @@ const product_intro_slider = new Swiper('.product-intro__image-block', {
     autoplay: {
         delay: 5000,
     },
+
+    on: {
+        beforeInit: function () {
+            if (!$('.product-intro__footer-img-box').find('img').length) {
+                slide_number = $('.product-intro__img-box').length;
+                $('.product-intro__footer-img-box').parent()
+                    .html(
+                        '<div class="product-intro-next-slide swiper">' +
+                        '<div class="swiper-wrapper">' +
+                        $('.product-intro__image-block .swiper-wrapper').html() +
+                        '</div>' +
+                        '</div>'
+                    );
+                not_image_product_intro = true;
+            }
+        },
+
+        slideChange: function () {
+            if (not_image_product_intro) {
+                let next_slide = function () {
+                    let slide = product_intro_slider.activeIndex + 1;
+                    if (slide === slide_number) {
+                        return 0;
+                    } else {
+                        return slide;
+                    }
+                }
+                product_container_next_slide.slideTo(next_slide());
+            }
+        },
+    },
 });
+
+if (not_image_product_intro) {
+    const product_container_next_slide = new Swiper('.product-intro-next-slide', {
+        direction: 'horizontal',
+    });
+    product_container_next_slide.slideNext(0);
+}
