@@ -3068,6 +3068,18 @@ body {
 .list-products {
   margin-bottom: 18rem;
 }
+.list-products__title {
+  margin-bottom: 4rem;
+  font-weight: bold;
+  font-size: 4.3rem;
+  line-height: 5.5rem;
+}
+@media (max-width: 48em) {
+  .list-products__title {
+    font-size: 6.8rem;
+    line-height: 11rem;
+  }
+}
 .list-products__title-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3247,6 +3259,10 @@ body {
 @media (max-width: 48em) {
   .list-products {
     margin-bottom: 20rem;
+  }
+  .list-products__title {
+    margin-bottom: 6rem;
+    line-height: 8rem;
   }
   .list-products__content {
     margin-bottom: 6rem;
