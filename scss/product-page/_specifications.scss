@@ -1,0 +1,85 @@
+@import "../param";
+
+.specifications {
+  margin-bottom: 18rem;
+
+  &__title {
+    margin-bottom: 4rem;
+    @include title-font;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    width: 65rem;
+    font-weight: 350;
+    font-size: 1.8rem;
+    line-height: 2.65rem;
+  }
+
+  &__info-list {
+    width: 66rem;
+  }
+
+  &__info-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.8rem 0;
+
+    font-size: 2rem;
+    line-height: 2.95rem;
+
+    &:nth-child(n + 2) {
+      border-top: 1px solid rgba(217, 220, 225, 1);
+    }
+  }
+
+  &__info-name {
+  }
+
+  &__info-value {
+  }
+}
+
+@media (max-width: 48em) {
+  .specifications {
+    margin-bottom: 20rem;
+
+    &__title {
+      margin-bottom: 3rem;
+      line-height: 8rem;
+    }
+
+    &__content {
+      display: block;
+    }
+
+    &__text {
+      width: 100%;
+      margin-bottom: 6rem;
+      font-size: 3.4rem;
+      line-height: 5rem;
+    }
+
+    &__info-list {
+      width: 100%;
+    }
+
+    &__info-list-item {
+      padding: 3rem 0;
+      font-size: 4rem;
+      line-height: 5.9rem;
+    }
+
+    &__info-name {
+    }
+
+    &__info-value {
+    }
+  }
+}
