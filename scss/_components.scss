@@ -24,6 +24,23 @@
   }
 }
 
+.breadcrumbs {
+  margin-top: 4rem;
+  margin-bottom: 9rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.95rem;
+  color: $gray;
+
+  &__separator {
+    margin: 0 0.5rem;
+  }
+
+  &__current {
+    color: $default-color;
+  }
+}
+
 @media (max-width: 48em) {
   .red-btn {
     font-size: 3.7rem;

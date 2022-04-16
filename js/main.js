@@ -35,12 +35,14 @@ $(document).ready(function () {
     $('.modal-callback__close').click(() => {
         $('.modal-callback')
             .hide()
-            .removeClass('second');
+            .removeClass('second')
+            .find('.modal-callback__input').val('');
     });
     $('.modal-callback__bg').click(() => {
         $('.modal-callback')
             .hide()
-            .removeClass('second');
+            .removeClass('second')
+            .find('.modal-callback__input').val('');
     });
 
     // Catalog category open

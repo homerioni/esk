@@ -261,3 +261,48 @@ const parts_slider = new Swiper('.parts__cards', {
         delay: 5000,
     },
 });
+
+const product_intro_slider = new Swiper('.product-intro__image-block', {
+    slidesPerView: 1,
+
+    breakpoints: {
+        769: {
+            direction: 'vertical',
+        },
+        0: {
+            direction: 'horizontal',
+        },
+    },
+
+    pagination: {
+        el: '.product-intro__pagination',
+        type: 'fraction',
+        formatFractionCurrent: function (number) {
+            if (number < 10) {
+                return '0' + number;
+            } else {
+                return number;
+            }
+        },
+        formatFractionTotal: function (number) {
+            if (number < 10) {
+                return '0' + number;
+            } else {
+                return number;
+            }
+        },
+        renderFraction: function (currentClass, totalClass) {
+            return '<div class="' + currentClass + '"></div>' +
+                '<div class="product-intro__scrollbar"></div>' +
+                '<div class="' + totalClass + '"></div>';
+        },
+    },
+
+    scrollbar: {
+        el: ".product-intro__scrollbar",
+    },
+
+    autoplay: {
+        delay: 5000,
+    },
+});

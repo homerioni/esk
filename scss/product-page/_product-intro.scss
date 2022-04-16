@@ -1,0 +1,358 @@
+@import "../param";
+
+.product-intro {
+  position: relative;
+  margin-bottom: 15rem;
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -13rem;
+    z-index: -1;
+    width: 62rem;
+    height: calc(100% + 13rem);
+    display: block;
+    background-color: #ECECEC;
+  }
+
+  &__back-link {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-top: -2rem;
+    margin-bottom: 9rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 3rem;
+
+    > span:nth-child(1) {
+      display: block;
+      margin-right: 3rem;
+      font-size: 1.9rem;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text-block {
+    width: 61.5rem;
+  }
+
+  &__title {
+    width: 55rem;
+    margin-bottom: 2rem;
+    @include title-font;
+  }
+
+  &__item-number {
+    margin-bottom: 5rem;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+
+  &__text {
+    margin-bottom: 5rem;
+    font-weight: 350;
+    font-size: 1.8rem;
+    line-height: 2.65rem;
+  }
+
+  &__price {
+    display: flex;
+    align-items: flex-start;
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 5.5rem;
+
+    &:after {
+      content: '₽';
+      margin-left: 0.5rem;
+      font-weight: 800;
+      font-size: 2.3rem;
+      line-height: 2.7rem;
+    }
+  }
+
+  &__image-block {
+    width: 55rem;
+    height: 55rem;
+    margin: -10rem 0 0 auto;
+  }
+
+  &__img-box {
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__pagination {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    margin-top: -10rem;
+
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+
+  &__scrollbar {
+    height: 13.2rem;
+    width: 3px;
+    margin: 1rem 0;
+    border-radius: 4px;
+    background-color: #ddd;
+
+    .swiper-scrollbar-drag {
+      background: $red;
+    }
+  }
+
+  &__footer {
+    margin-top: 8rem;
+    background: linear-gradient(90deg ,#ECECEC 0, #ECECEC 50%, $red 50%);
+  }
+
+  &__footer-container {
+    display: flex;
+    align-items: center;
+    height: 12rem;
+  }
+
+  &__footer-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &:nth-child(1) {
+      background-color: #ECECEC;
+
+      > a {
+        padding-right: 10rem;
+        border-right: 2px solid rgba(138, 138, 138, 1);
+      }
+
+      .red-btn__icon {
+        transform: rotate(90deg);
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: #ECECEC;
+
+      > a {
+        padding-right: 5rem;
+        padding-left: 10rem;
+      }
+
+      .red-btn__icon {
+        transform: rotate(90deg);
+      }
+    }
+
+    &:nth-child(3) {
+      position: relative;
+      justify-content: center;
+      width: 45.7rem;
+      height: 100%;
+      background-color: #fff;
+    }
+
+    &:nth-child(4) {
+      flex: auto;
+      justify-content: flex-end;
+
+      .red-btn__icon {
+        background-color: #fff;
+        color: $red;
+      }
+    }
+  }
+
+  &__btn {
+    height: fit-content;
+  }
+
+  &__scale-btn {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 2.9rem;
+    height: 2.9rem;
+
+    > svg {
+      width: 100%;
+      height: 100%;
+
+      path {
+        stroke: $gray;
+      }
+    }
+  }
+
+  &__footer-img-box {
+    width: 23rem;
+    height: 9.4rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .product-intro {
+    margin-bottom: 20rem;
+
+    &:after {
+      top: auto;
+      bottom: 0;
+      width: 100%;
+      height: 70.2rem;
+    }
+
+    &__back-link {
+      margin-top: 8rem;
+      margin-bottom: 4rem;
+      font-size: 3.2rem;
+      line-height: 6rem;
+
+      > span:nth-child(1) {
+        margin-right: 6rem;
+        margin-bottom: 1rem;
+        font-size: 3.8rem;
+      }
+    }
+
+    &__content {
+      display: block;
+    }
+
+    &__text-block {
+      width: 100%;
+    }
+
+    &__title {
+      width: 100%;
+      margin-bottom: 3rem;
+      line-height: 8rem;
+    }
+
+    &__item-number {
+    }
+
+    &__text {
+      margin-bottom: 0;
+      font-size: 3.4rem;
+      line-height: 5rem;
+    }
+
+    &__price {
+    }
+
+    &__image-block {
+      width: 50rem;
+      height: 50rem;
+      margin: 0 auto;
+    }
+
+    &__img-box {
+    }
+
+    &__scrollbar {
+      width: 26.4rem;
+      margin: 0 2.2rem;
+    }
+
+    &__pagination {
+      font-size: 3.2rem;
+      line-height: 6rem;
+    }
+
+    &__pagination {
+      flex-direction: row;
+      margin: 0 auto;
+      font-size: 3.2rem;
+      line-height: 6rem;
+    }
+
+    &__scrollbar {
+      width: 26.4rem;
+      height: 3px;
+      margin: 0 2.5rem;
+    }
+
+    &__footer {
+      background: none;
+    }
+
+    &__footer-container {
+      flex-wrap: wrap;
+      align-items: center;
+      height: auto;
+      padding: 0;
+    }
+
+    &__footer-item {
+      &:nth-child(1) {
+        order: 2;
+        width: 50%;
+        background-color: #fff;
+
+        > a {
+          width: 100%;
+          padding: 0;
+          margin: 2.5rem 0 2.5rem 4rem;
+        }
+      }
+
+      &:nth-child(2) {
+        order: 3;
+        width: 50%;
+        background-color: #fff;
+
+        > a {
+          justify-content: flex-end;
+          width: 100%;
+          padding: 0;
+          margin: 2.5rem 4rem 2.5rem 0;
+        }
+      }
+
+      &:nth-child(4) {
+        order: 1;
+        flex: none;
+        width: calc(100% + 8rem);
+        padding: 3rem 0;
+        justify-content: center;
+        background-color: $red;
+
+        svg {
+          width: 8.6rem;
+          height: 8.6rem;
+          margin-right: 3rem;
+
+          path {
+            fill: white;
+          }
+        }
+      }
+    }
+
+    &__btn {
+    }
+
+    &__scale-btn {
+    }
+
+    &__footer-img-box {
+    }
+  }
+}
