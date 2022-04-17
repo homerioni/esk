@@ -11,6 +11,10 @@
 .contacts {
   margin-bottom: 18rem;
 
+  &--contacts-page {
+    margin-top: 8rem;
+  }
+
   &__container {
     display: flex;
     flex-wrap: wrap;

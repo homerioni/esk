@@ -2279,6 +2279,9 @@ body {
 .contacts {
   margin-bottom: 18rem;
 }
+.contacts--contacts-page {
+  margin-top: 8rem;
+}
 .contacts__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4715,6 +4718,7 @@ body {
 
 @media (max-width: 48em) {
   .portfolio {
+    margin-top: 8rem;
     margin-bottom: 20rem;
   }
   .portfolio__title-block {
