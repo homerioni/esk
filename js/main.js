@@ -60,4 +60,11 @@ $(document).ready(function () {
         }
     });
 
+    // Portfolio адрес
+    $('.portfolio__item').hover(function () {
+        $(this).find('.portfolio__address').slideDown(250);
+    }, function () {
+        $(this).find('.portfolio__address').slideUp(250);
+    });
+
 });
