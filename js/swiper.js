@@ -345,3 +345,46 @@ if (not_image_product_intro) {
     });
     product_container_next_slide.slideNext(0);
 }
+
+const reviews_slider = new Swiper('.reviews__slider', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    spaceBetween: rem(3),
+
+    pagination: {
+        el: '.reviews__pagination',
+        type: 'fraction',
+        formatFractionCurrent: function (number) {
+            if (number < 10) {
+                return '0' + number;
+            } else {
+                return number;
+            }
+        },
+        formatFractionTotal: function (number) {
+            if (number < 10) {
+                return '0' + number;
+            } else {
+                return number;
+            }
+        },
+        renderFraction: function (currentClass, totalClass) {
+            return '<div class="' + currentClass + '"></div>' +
+                '<div class="reviews__scrollbar"></div>' +
+                '<div class="' + totalClass + '"></div>';
+        },
+    },
+
+    navigation: {
+        nextEl: '.reviews__arrow--right',
+        prevEl: '.reviews__arrow--left',
+    },
+
+    scrollbar: {
+        el: ".reviews__scrollbar",
+    },
+
+    autoplay: {
+        delay: 5000,
+    },
+});

@@ -67,4 +67,10 @@ $(document).ready(function () {
         $(this).find('.portfolio__address').slideUp(250);
     });
 
+    // Reviews read-all
+    $('.reviews__read-all').click(function () {
+        $(this).hide();
+        $('.reviews__item-review').css('display', 'block');
+    });
+
 });
