@@ -16,10 +16,12 @@ $(document).ready(function () {
     $('.header__search').click(function () {
         $('.header').addClass('search-open');
         $('.header__search').addClass('open');
+        $('body').addClass('lock');
     });
     $('.header__search-close').click(function () {
         $('.header').removeClass('search-open');
         $('.header__search').removeClass('open');
+        $('body').removeClass('lock');
     });
 
     // Popup callback

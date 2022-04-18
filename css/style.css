@@ -262,10 +262,10 @@ input[type=number] {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 2;
+  z-index: 4;
   display: block;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   background-color: #F5F5F5;
   opacity: 0;
   -webkit-transition: 0.5s ease;
@@ -302,7 +302,7 @@ input[type=number] {
       -ms-flex: none;
           flex: none;
   position: relative;
-  z-index: 3;
+  z-index: 5;
   width: 6.1rem;
   height: 6.8rem;
   margin-right: 3rem;
@@ -316,7 +316,7 @@ input[type=number] {
 }
 .header__menu {
   position: relative;
-  z-index: 3;
+  z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -347,7 +347,7 @@ input[type=number] {
 }
 .header__search.open {
   position: relative;
-  z-index: 3;
+  z-index: 5;
   width: 98rem;
   height: 6rem;
   padding: 0 3rem;
@@ -377,7 +377,7 @@ input[type=number] {
 }
 .header__search-close {
   position: relative;
-  z-index: 3;
+  z-index: 5;
   display: none;
   width: 4.4rem;
   height: 4.4rem;
@@ -391,7 +391,7 @@ input[type=number] {
   position: absolute;
   left: 41rem;
   top: 11rem;
-  z-index: 3;
+  z-index: 5;
   display: none;
   width: 98rem;
   max-height: 46rem;
@@ -491,7 +491,7 @@ input[type=number] {
 }
 .header__phone {
   position: relative;
-  z-index: 3;
+  z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -566,7 +566,7 @@ input[type=number] {
     position: fixed;
     left: -100%;
     top: 0;
-    z-index: 2;
+    z-index: 4;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -722,7 +722,7 @@ input[type=number] {
   }
   .header__burger {
     position: relative;
-    z-index: 3;
+    z-index: 5;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5067,7 +5067,7 @@ body {
 }
 .reviews__nav-block {
   position: relative;
-  z-index: 5;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
