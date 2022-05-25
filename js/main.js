@@ -75,4 +75,18 @@ $(document).ready(function () {
         $('.reviews__item-review').css('display', 'block');
     });
 
+    // Cart
+    $('.cart__item-plus').click(function () {
+        let item = $(this).parent().find('.cart__item-value'),
+            value = Number(item.val());
+        item.val(value + 1);
+    });
+    $('.cart__item-minus').click(function () {
+        let item = $(this).parent().find('.cart__item-value'),
+            value = Number(item.val());
+        if (value > 1) {
+            item.val(value - 1);
+        }
+    });
+
 });

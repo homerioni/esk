@@ -4277,7 +4277,7 @@ body {
   fill: #171717;
 }
 .cart__item-value {
-  width: 100%;
+  width: 7.5rem;
   font-weight: bold;
   font-size: 1.9rem;
   line-height: 2.8rem;
